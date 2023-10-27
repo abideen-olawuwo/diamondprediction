@@ -23,10 +23,10 @@ def predict_datapoint():
         return render_template('home.html')
     else:
         data = CustomData(
+            cut=request.form.get('cut'),
+            color=request.form.get('color'),
+            clarity=request.form.get('clarity'),
             carat=float(request.form.get('carat')),
-            cut=int(request.form.get('cut')),
-            color=int(request.form.get('color')),
-            clarity=int(request.form.get('clarity')),
             depth=float(request.form.get('depth')),
             table=float(request.form.get('table')),
             x=float(request.form.get('x')),
